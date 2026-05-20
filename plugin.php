@@ -1,43 +1,43 @@
 <?php
 
 /**
- * Plugin Name: Breakdance Custom Elements
- * Plugin URI: https://breakdance.com/
- * Description: Boilerplate plugin to save your custom elements created with Element Studio.
- * Author: Breakdance
- * Author URI: https://breakdance.com/
+ * Plugin Name: Syntra Custom Elements
+ * Plugin URI: https://studiosyntra.com.au/
+ * Description: Complex Blocks Added to breakdance
+ * Author: Studio Syntra
+ * Author URI: https://Studiosyntra.com.au/
  * License: GPLv2
- * Text Domain: breakdance
+ * Text Domain: StudioSyntra
  * Domain Path: /languages/
  * Version: 0.0.1
  */
 
-namespace BreakdanceCustomElements;
+namespace SyntraCustomElements;
 
 use function Breakdance\Util\getDirectoryPathRelativeToPluginFolder;
 
 add_action('breakdance_loaded', function () {
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/elements',
-        'BreakdanceCustomElements',
+        'SyntraCustomElements',
         'element',
-        'Custom Elements',
+        'Syntra Elements',
         false
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/macros',
-        'BreakdanceCustomElements',
+        'SyntraCustomElements',
         'macro',
-        'Custom Macros',
+        'Syntra Custom Macros',
         false,
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/presets',
-        'BreakdanceCustomElements',
+        'SyntraCustomElements',
         'preset',
-        'Custom Presets',
+        'Syntra Custom Presets',
         false,
     );
 },
